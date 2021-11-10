@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:not(i){
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --baseShade1:  #f5af19;
+    --baseShade2:  #ffd452;
+    --whiteShade1: #ffffff;
+    --whiteShade2: #f8fafb;
+    --blackShade1: #38324b;
+    --blackShade2: #575a7b;
+   
+    --baseFontSize: 1.6rem;
+
+    --headingFontSize1: 4rem;
+    --headingFontSize2: 3.2rem;
+    --headingFontSize3: 2rem;
+    --headingFontSize4: 1.8rem;
+
+    --borderRadius1: 1rem;
+    --borderRadiu2s: 0.5rem;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* Utility classes */
+
+.btn-primary,
+.btn-secondary{
+    padding: 1rem 2rem;
+    border-radius: var(--borderRadiu2s);
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.btn-primary{
+    background-color: var(--baseShade1);
+    color: var(--whiteShade1);
+}
+
+.btn-primary:hover{
+    background-color: var(--baseShade2);
+}
+
+.btn-primary a{
+    color: var(--whiteShade1) 
+}
+
+.btn-secondary {
+    background-color: var(--whiteShade1);
+    border: 0.3rem solid var(--baseShade1);
+    color: var(--baseShade1);
+}
+
+.btn-secondary:hover{
+    border: 0.3rem solid var(--baseShade2);
+    color: var(--baseShade2);
+}
+
+.btn-secondary  a{
+    color: var(--baseShade1);
+}
+
+section{
+    padding: 5rem 7rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+h1{
+    font-size: var(--headingFontSize1);
+    margin-bottom: 2rem;
+    word-spacing: 1rem;
+    line-height: 1.6;
+}
+
+h2{
+    font-size: var(--headingFontSize2);
+    color: var(--blackShade1);
+    font-weight: 700;
+    margin: 2rem 0 5rem 0;
+    text-align: center;
+}
+
+h3{
+    font-size: var(--headingFontSize3);
+    color: var(--blackShade1);
+    font-weight: 700;
+    margin: 1.5rem 0;
+
+}
+
+h4{
+    font-size: var(--headingFontSize4);
+}
+
+button,
+p,
+input[type="email"]{
+    font-size: var(--baseFontSize);
+    color: var(--blackShade2);
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+/* Scroll Indicator */
+
+.progress-container{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.8rem);
+}
+
+#progress{
+    width: 100%;
+    height: 100%;
+    background-color: var(--baseShade1);
+}
+
+ /* Navegation Bar */
+ 
+ nav{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     position: fixed;
+     top: 1rem;
+     left: 0;
+     padding: 2rem;
+     background-color: rgba(255, 255, 255, 0.5);
+     backdrop-filter: blur(0.8rem);
+ }
+
+nav .fas,
+#logo{
+    font-size: var(--headingFontSize4);
+}
+
+ #logo{
+     font-weight: 700;
+ }
+
+ nav ul{
+     list-style: none;
+     display: flex;
+     justify-content: space-around;
+     gap: 2rem;
+ }
+
+ nav a{
+     color: var(--blackShade1);
+     text-decoration: none;
+     display: block;
+     position: relative;
+     font-size: var(--headingFontSize3);
+ }
+
+nav i.fas{
+    display: none;
+}
+
+/* Navegation link hover */
+
+nav li a:before{
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width: 0%;
+    height: 50%;
+    bottom: 0;
+    z-index: -1;
+    margin: -5%;
+    transition: all 0.5s;
+}
+
+nav li a:hover:before{
+    background-color: var(--baseShade2);
+    width: 110%;
+}
+
+/* Active SideNav Menu */
+
+nav ul.active{
+    left: 0;
+}
+
+/* Header */
+
+header{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    align-items: center;
+}
+
+.hero-text p{
+    text-align: justify;
+}
+
+header img{
+    display: flex;
+    width: 100%;
+   
+}
+
+.hero-btns{
+    display: flex;
+    gap: 2rem;
+}
+
+.hero-btns button{
+    margin-top: 2rem;
+}
+
+/* Sobre nós */
+
+.about .row{
+    align-items:stretch;
+}
+
+.about .row .column{
+    width: 90%;
+    padding: 0;
+}
+
+.about img{
+    display: block;
+    width: 100%;
+}
+
+.about p{
+    text-align: justify;
+}
+
+
+/* baixe o aplicativo */
+
+.app .row{
+    align-items: stretch;
+}
+
+.app .row .column{
+    width: %;
+    padding: 0;
+}
+
+.img{
+    display: block;
+    width: 100%;
+}
+
+.app p{
+    text-align: justify;
+}
+
+/* Sobre este ebook */
+
+.ebook .column{
+    padding: 4rem 2rem;
+    border-radius: var(--borderRadius1);
+}
+
+.ebook .column:hover{
+    background-color: var(--baseShade1);
+}
+
+.ebook .column:hover p{
+    color: var(--whiteShade1);
+}
+
+.ebook .img-container{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--whiteShade1);
+    margin: auto;
+    border-radius: 50%;
+}
+
+.ebook img{
+    width: 7rem;
+    display: block;
+    margin: auto;
+    padding: 1.1rem 0;
+}
+
+.ebook h3{
+    text-align: center;
+}
+
+.ebook p{
+    text-align: center;
+}
+
+/* Baixe aqui */
+
+.baixar{
+    background: linear-gradient(var(--whiteShade1) 60%, var(--baseShade1) 60% );
+}
+
+.baixar .wrapper{
+    background-color: var(--whiteShade1);
+    padding: 3rem 10rem;
+    border-radius: var(--borderRadius1);
+    box-shadow: 0 -10px 25px rgba(202, 202, 211, 0.5);
+}
+
+.baixar .wrapper h3{
+    text-align: center;
+}
+
+.baixar .wrapper p{
+    text-align: center;
+}
+
+.baixar form{
+    margin: 3rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.baixar form button{
+    width: 50%;
+    align-items: center;
+}
+
+/* Rodapé */
+
+footer{
+    /* background-color: var(--baseShade1); */
+    text-align: center;
+}
+footer .row{
+    padding: 3rem 0;
+}
+
+footer .column{
+    width: 100%;
+}
+
+footer .row:nth-child(1){
+    border-bottom: 0.2rem solid var(--whiteShade1);
+}
+
+footer .row:nth-child(2){
+    justify-content: center;
+    gap: 20rem;
+}
+
+/* scroll to top button */
+
+#scroll-top{
+    display: grid;
+    place-items: center;
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: var(--baseShade1);
+    border: none;
+    outline: none;
+    border: 0.4rem solid var(--whiteShade1);
+    border-radius: var(--borderRadiu2s);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.12); 
+}
+
+#scroll-top .fas{
+    color: var(--whiteShade1);
+    font-size: 2rem;
+    line-height: 0;
+}
