@@ -1,0 +1,26 @@
+@media only screen and (max-width: 767px){
+    nav i.fas{
+        display: block;
+    }
+
+    nav ul{
+        height: calc(100vh - 67.32px);
+        width: 100vw;
+        position: fixed;
+        top: 67.32px;
+        left: -100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, var(--baseShade1), var(--baseShade2));
+        transition: 1s;
+    }
+
+    /* nav ul li a::before{
+        background-color: transparent;
+    }
+    nav ul li a:hover::before{
+        background-color: var(--whiteshade1);
+    }
+     */
+}
